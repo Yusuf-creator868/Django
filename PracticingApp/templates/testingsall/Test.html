@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for testss in myhello %}
+        <h1>{{ testss.hello }}</h1>
+        <h1>{{ testss.world }}</h1>
+    {% endfor %}
+{% endblock content %}

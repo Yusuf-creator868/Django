@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% block content %}
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom nb-4">Log In</legend>
+                    {{ form }}
+                </fieldset>
+                <dic class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Login</button>
+                </dic>
+            </form>
+            <dic class="border-top pt-3">
+                <small class="text-muted">
+                    Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+                </small>
+            </dic>
+        </div>
+{% endblock content %}
+
